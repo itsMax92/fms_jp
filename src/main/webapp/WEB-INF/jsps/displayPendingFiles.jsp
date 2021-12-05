@@ -37,8 +37,8 @@
 </script>
 <script>
 	$(document).ready(function() {
-		var baseurl = "http://localhost:9090/fms";
-		/* var baseurl = "http://172.16.112.83:9090/fms"; */
+		/* var baseurl = "http://localhost:9090/fms"; */
+		var baseurl = "http://172.16.112.83:9090/fms";
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("GET", baseurl + "/showPendingFilesJson", true);
 		xmlhttp.onreadystatechange = function() {
