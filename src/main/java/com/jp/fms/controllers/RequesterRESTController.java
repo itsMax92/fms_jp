@@ -1,0 +1,25 @@
+package com.jp.fms.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jp.fms.model.Requester;
+import com.jp.fms.repos.FileRepository;
+import com.jp.fms.repos.RequesterRepository;
+
+@RestController
+public class RequesterRESTController {
+	@Autowired
+	RequesterRepository requesterRepository;
+	@Autowired
+	FileRepository fileRepository;
+
+	@RequestMapping("/showAllRequesters")
+	public List<Requester> showAllRequesters() {
+		return requesterRepository.findAll();
+	}
+
+}
