@@ -26,7 +26,7 @@ function validateForm() {
 
 </head>
 <body>
-<h2>~~~</h2><br>
+<h2>File Management System</h2><br>
 <%@ include file="commonParts/buttons.jsp" %> 
 <h2>Due Date Extend</h2>
 <br>

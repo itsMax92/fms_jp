@@ -15,7 +15,7 @@
 </head>
 <body class="animsition">
 <%-- <body class="animsition" onload="myChartFunction(${dailyIssuedFiles})"> --%>
-<h2>~~~</h2><br>
+<h2>File Management System</h2><br>
 <%@ include file="commonParts/buttons.jsp" %> 
 <br>
  <div class="page-wrapper">

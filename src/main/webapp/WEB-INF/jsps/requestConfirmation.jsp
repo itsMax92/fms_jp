@@ -11,7 +11,7 @@
 <%@ include file="css/mycss.jsp" %> 
 </head>
 <body>
-<h2>~~~</h2><br>
+<h2>File Management System</h2><br>
 <%@ include file="commonParts/buttons.jsp" %> 
 <br>
 <table>

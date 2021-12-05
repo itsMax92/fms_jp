@@ -19,4 +19,5 @@ public interface FileRepository extends JpaRepository<File, Long> {
 
 	List<File> findByUnitNameStartsWithAndStatus(String unitName, String string);
 
+	List<File> findByGreenNumberAndFileType(String number, String fileType);
 }

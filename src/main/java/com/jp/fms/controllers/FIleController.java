@@ -41,6 +41,11 @@ public class FIleController {
         return "findRequesterPageGreen";
     }
 
+    @RequestMapping("/showGreenNumber")
+    public String showDisplayPageGreenNumber() {
+        return "findGreenNumberPage";
+    }
+
     @RequestMapping("/showReIssueFiles")
     public String showReIssueFilesPage() {
         return "reIssueFilesPage";

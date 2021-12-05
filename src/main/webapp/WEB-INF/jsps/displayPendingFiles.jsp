@@ -37,8 +37,8 @@
 </script>
 <script>
 	$(document).ready(function() {
-		/* var baseurl = "http://localhost:9090/fms"; */
-		var baseurl = "http://172.16.112.83:9090/fms";
+		var baseurl = "http://localhost:9090/fms";
+		/* var baseurl = "http://172.16.112.83:9090/fms"; */
 		var xmlhttp = new XMLHttpRequest();
 		xmlhttp.open("GET", baseurl + "/showPendingFilesJson", true);
 		xmlhttp.onreadystatechange = function() {
@@ -54,6 +54,8 @@
 						"data" : "file.customerName"
 					}, {
 						"data" : "file.fileType"
+					}, {
+						"data" : "file.greenNumber"
 					}, {
 						"data" : "requester.requesterName"
 					}, {
@@ -99,7 +101,7 @@
 </script>
 </head>
 <body>
-	<h2>~~~</h2>
+	<h2>File Management System</h2>
 	<br>
 	<%@ include file="commonParts/buttons.jsp"%>
 	<h3>Pending Files</h3>
@@ -111,6 +113,7 @@
 				<th>Unit Name</th>
 				<th>Customer Name</th>
 				<th>File Type</th>
+				<th>Green Number</th>
 				<th>Requester Name</th>
 				<th>In Transit Requester</th>
 				<th>Department</th>
@@ -130,6 +133,7 @@
 				<th>Unit Name</th>
 				<th>Customer Name</th>
 				<th>File Type</th>
+                <th>Green Number</th>
 				<th>Requester Name</th>
 				<th>In Transit Requester</th>
 				<th>Department</th>

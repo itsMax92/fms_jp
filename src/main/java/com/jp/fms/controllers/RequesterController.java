@@ -1,5 +1,7 @@
 package com.jp.fms.controllers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -109,6 +111,30 @@ public class RequesterController {
 			modelMap.addAttribute("msg", "Requester Not Created");
 			return "findRequesterPageGreen";
 		}
+	}
+
+	@RequestMapping(value = "/greennumbersearch", method = RequestMethod.POST)
+	public String searchGreenNumber(@RequestParam(name = "numbers") String numbers, ModelMap modelMap) {
+		try{
+			List<String> list = Arrays.asList(numbers.split(" "));
+			List<File> fileList = new ArrayList<>();
+			for (String number : list) {
+				List<File> green = fileRepository.findByGreenNumberAndFileType(number, "GREEN");
+				fileList.addAll(green);
+			}
+			if (!fileList.isEmpty()) {
+				modelMap.addAttribute("fileList", fileList);
+				return "findGreenNumberPage";
+			} else {
+				modelMap.addAttribute("msg", "Green File Not Created");
+				return "findGreenNumberPage";
+			}
+		}catch (Exception e) {
+			System.err.println(e.getMessage());
+			modelMap.addAttribute("msg", "Something went wrong");
+		}
+		modelMap.addAttribute("msg", "Something went wrong");
+		return "findGreenNumberPage";
 	}
 
 	@RequestMapping("/showAddRequester")

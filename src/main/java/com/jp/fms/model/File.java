@@ -16,6 +16,8 @@ public class File {
 	private long id;
 	@Column(name = "unit_name")
 	private String unitName;
+	@Column(name = "green_number")
+	private String greenNumber;
 	@Column(name = "status")
 	private String status;
 	@Column(name = "customer_name")
@@ -26,6 +28,14 @@ public class File {
 	private String locationCode;
 	@Column(name = "requester_id")
 	private long requesterId;
+
+	public String getGreenNumber() {
+		return greenNumber;
+	}
+
+	public void setGreenNumber(String greenNumber) {
+		this.greenNumber = greenNumber;
+	}
 
 	public long getRequesterId() {
 		return requesterId;

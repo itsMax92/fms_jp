@@ -20,7 +20,7 @@ function validateForm() {
 </script>
 </head>
 <body>
-<h2>~~~</h2><br>
+<h2>File Management System</h2><br>
 <%@ include file="commonParts/buttons.jsp" %> 
 <h3>File Receiving Panel</h3>
 <form name="myForm" onsubmit="return validateForm()" action="searchPendingFile" method="post">

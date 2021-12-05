@@ -87,7 +87,7 @@
 </script>
 </head>
 <body>
-	<h2>~~~</h2>
+	<h2>File Management System</h2>
 	<br>
 	<%@ include file="commonParts/buttons.jsp"%>
 	<h3>File Movement History</h3>

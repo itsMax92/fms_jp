@@ -34,7 +34,7 @@
 	src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
 </head>
 <body>
-	<h2>~~~</h2>
+	<h2>File Management System</h2>
 	<br>
 	<%@ include file="commonParts/buttons.jsp"%>
 	<h3>Requesters</h3>
